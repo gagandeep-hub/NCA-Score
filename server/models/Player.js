@@ -16,6 +16,7 @@ const playerSchema = new mongoose.Schema({
     ballsFaced: { type: Number, default: 0 },
     highestScore: { type: Number, default: 0 },
     fours: { type: Number, default: 0 },
+    sixes: { type: Number, default: 0 },
     fifties: { type: Number, default: 0 },
     hundreds: { type: Number, default: 0 },
     timesOut: { type: Number, default: 0 } // To calculate batting average
