@@ -391,7 +391,7 @@ module.exports = (io) => {
             ballEntry.wicketType = wicketType;
 
             striker.batting.isOut = true;
-            striker.batting.howOut = wicketType;
+            striker.batting.howOut = (value && value.fielder) ? `${wicketType} by ${value.fielder}` : wicketType;
             striker.batting.balls += 1;
 
             bowler.bowling.balls += 1;

@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './ScoringPanel.css';
 
-export default function ScoringPanel({ onScore, onUndo, onEndInnings, disabled }) {
+export default function ScoringPanel({ onScore, onUndo, onEndInnings, disabled, bowlingTeam }) {
   const [showWicketModal, setShowWicketModal] = useState(false);
+  const [selectedWicketType, setSelectedWicketType] = useState(null);
 
   const handleScore = (action, value) => {
     if (disabled) return;
@@ -10,8 +11,19 @@ export default function ScoringPanel({ onScore, onUndo, onEndInnings, disabled }
   };
 
   const handleWicketSelect = (type) => {
-    handleScore('wicket', { type });
+    if (['caught', 'runout', 'stumped'].includes(type) && bowlingTeam?.players) {
+      setSelectedWicketType(type);
+    } else {
+      handleScore('wicket', { type });
+      setShowWicketModal(false);
+      setSelectedWicketType(null);
+    }
+  };
+
+  const handleFielderSelect = (fielderName) => {
+    handleScore('wicket', { type: selectedWicketType, fielder: fielderName });
     setShowWicketModal(false);
+    setSelectedWicketType(null);
   };
 
   return (
@@ -78,21 +90,54 @@ export default function ScoringPanel({ onScore, onUndo, onEndInnings, disabled }
       {showWicketModal && (
         <div className="wicket-modal-overlay">
           <div className="wicket-modal glass-card animate-slide-up">
-            <h3>How Out?</h3>
-            <div className="wicket-grid">
-              {['bowled', 'caught', 'lbw', 'runout', 'stumped', 'hitwicket'].map(type => (
-                <button 
-                  key={type} 
-                  className="wicket-type-btn"
-                  onClick={() => handleWicketSelect(type)}
-                >
-                  {type.toUpperCase()}
+            
+            {!selectedWicketType ? (
+              <>
+                <h3>How Out?</h3>
+                <div className="wicket-grid">
+                  {['bowled', 'caught', 'lbw', 'runout', 'stumped', 'hitwicket'].map(type => (
+                    <button 
+                      key={type} 
+                      className="wicket-type-btn"
+                      onClick={() => handleWicketSelect(type)}
+                    >
+                      {type.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
+                <button className="btn-secondary cancel-wicket-btn" onClick={() => {
+                  setShowWicketModal(false);
+                  setSelectedWicketType(null);
+                }}>
+                  Cancel
                 </button>
-              ))}
-            </div>
-            <button className="btn-secondary cancel-wicket-btn" onClick={() => setShowWicketModal(false)}>
-              Cancel
-            </button>
+              </>
+            ) : (
+              <>
+                <h3>Select Fielder</h3>
+                <div className="selection-list" style={{ maxHeight: '300px', overflowY: 'auto', marginBottom: '15px' }}>
+                  {bowlingTeam?.players.map((p, i) => (
+                    <button
+                      key={i}
+                      className="selection-btn"
+                      style={{ padding: '8px 12px', fontSize: '0.9rem' }}
+                      onClick={() => handleFielderSelect(p.name)}
+                    >
+                      {p.name}
+                    </button>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button className="btn-secondary" onClick={() => handleFielderSelect('')} style={{ flex: 1 }}>
+                    Skip Fielder
+                  </button>
+                  <button className="btn-ghost" onClick={() => setSelectedWicketType(null)} style={{ flex: 1 }}>
+                    Back
+                  </button>
+                </div>
+              </>
+            )}
+
           </div>
         </div>
       )}

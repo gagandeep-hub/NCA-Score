@@ -188,6 +188,7 @@ export default function LiveMatchPage() {
             onUndo={undoBall}
             onEndInnings={() => setShowEndInnings(true)}
             disabled={match.status !== 'live'}
+            bowlingTeam={bowlingTeam}
           />
         )}
 
