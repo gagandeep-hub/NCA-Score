@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 
 const SocketContext = createContext(null);
 
-const SOCKET_URL = 'http://localhost:5000';
+const SOCKET_URL = 'https://nca-score.onrender.com';
 
 export function SocketProvider({ children }) {
   const [socket, setSocket] = useState(null);
