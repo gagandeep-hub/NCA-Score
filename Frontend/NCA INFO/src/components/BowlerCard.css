@@ -1,0 +1,42 @@
+/* ===== BOWLER CARD ===== */
+.bowler-card {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.bowler-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bowler-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bowler-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bstat {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.bstat.wickets {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.bstat.econ {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}

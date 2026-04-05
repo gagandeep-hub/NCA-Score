@@ -1,0 +1,166 @@
+/* ===== SUMMARY PAGE ===== */
+.summary-page {
+  min-height: 100vh;
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.summary-header {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+/* Result */
+.result-card {
+  text-align: center;
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.result-trophy {
+  font-size: 3rem;
+  animation: bounceIn 0.6s ease;
+}
+
+.result-line {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--accent-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Innings Card */
+.innings-card {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.innings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-default);
+  margin-bottom: var(--space-md);
+}
+
+.innings-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.innings-score {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.innings-overs {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+/* Stats */
+.stats-section {
+  margin-bottom: var(--space-lg);
+}
+
+.stats-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-sm);
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.stats-table th {
+  text-align: center;
+  padding: 8px 6px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.stats-table td {
+  text-align: center;
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--border-default);
+  color: var(--text-secondary);
+}
+
+.th-name, .td-name {
+  text-align: left !important;
+}
+
+.td-name {
+  font-weight: 600;
+  color: var(--text-primary) !important;
+}
+
+.td-name sup {
+  color: var(--accent-amber);
+  font-size: 0.6rem;
+  margin-left: 2px;
+}
+
+.how-out {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--accent-red);
+  font-style: italic;
+}
+
+.not-out {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: italic;
+}
+
+.td-runs {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  font-family: var(--font-mono);
+}
+
+.td-wickets {
+  color: var(--accent-red) !important;
+  font-weight: 700;
+}
+
+tr.out .td-name {
+  opacity: 0.7;
+}
+
+.extras-line {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-top: var(--space-sm);
+}
+
+.back-btn {
+  width: 100%;
+  margin-top: var(--space-md);
+}

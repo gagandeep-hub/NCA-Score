@@ -1,0 +1,134 @@
+/* ===== MATCH HISTORY PAGE ===== */
+.history-page {
+  min-height: 100vh;
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.history-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+  filter: drop-shadow(0 0 10px var(--primary-glow));
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+/* History Card */
+.history-card {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  border-left: 4px solid var(--primary); /* Neon cyan accent */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(0,229,255,0.2);
+}
+
+.history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: var(--space-sm);
+}
+
+.match-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.match-code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary);
+  background: rgba(0, 229, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.1em;
+}
+
+.history-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.2);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.history-team {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.history-team h5 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.history-score {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.history-score small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.history-vs {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--primary-dim);
+  font-size: 0.9rem;
+  padding: 0 var(--space-md);
+  opacity: 0.7;
+}
+
+.history-result {
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--accent-amber);
+  background: rgba(255, 215, 64, 0.1);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+
+.view-summary-btn {
+  align-self: center;
+  width: 100%;
+  margin-top: var(--space-xs);
+  border: 1px solid var(--border-light);
+}
+
+.back-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+}

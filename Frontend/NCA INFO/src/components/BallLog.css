@@ -1,0 +1,99 @@
+/* ===== BALL LOG ===== */
+.ball-log {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.overs-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.over-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.over-number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.over-balls {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.ball-chip {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.ball-dot {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border-default);
+}
+
+.ball-run {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+}
+
+.ball-four {
+  background: rgba(66, 165, 245, 0.15);
+  color: var(--four-color);
+  border: 1px solid rgba(66, 165, 245, 0.3);
+}
+
+.ball-six {
+  background: rgba(255, 215, 64, 0.15);
+  color: var(--six-color);
+  border: 1px solid rgba(255, 215, 64, 0.3);
+}
+
+.ball-wicket {
+  background: rgba(255, 23, 68, 0.2);
+  color: var(--wicket-color);
+  border: 1px solid rgba(255, 23, 68, 0.4);
+}
+
+.ball-wide {
+  background: rgba(255, 167, 38, 0.12);
+  color: var(--wide-color);
+  border: 1px solid rgba(255, 167, 38, 0.3);
+  font-size: 0.55rem;
+}
+
+.ball-noball {
+  background: rgba(239, 83, 80, 0.12);
+  color: var(--noball-color);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  font-size: 0.55rem;
+}
+
+.over-total {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}

@@ -1,0 +1,139 @@
+/* ===== TOSS PAGE ===== */
+.toss-page {
+  min-height: 100vh;
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.toss-header {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+/* Coin Section */
+.toss-coin-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd740, #ffab00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255, 215, 64, 0.3);
+}
+
+.coin:hover {
+  transform: scale(1.05);
+}
+
+.coin.flipping {
+  animation: coinFlip 1.5s ease-in-out;
+}
+
+@keyframes coinFlip {
+  0%   { transform: rotateY(0deg) scale(1); }
+  50%  { transform: rotateY(1080deg) scale(0.8); }
+  100% { transform: rotateY(1440deg) scale(1); }
+}
+
+.coin-face {
+  font-size: 3rem;
+}
+
+.flip-btn {
+  padding: 12px 32px;
+}
+
+/* Toss Sections */
+.toss-section {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.toss-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.toss-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.toss-option:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+}
+
+.toss-option.selected {
+  border-color: var(--primary);
+  background: rgba(0, 200, 83, 0.06);
+  color: var(--primary);
+}
+
+.toss-option.selected.bat {
+  border-color: var(--accent-amber);
+  background: rgba(255, 215, 64, 0.06);
+  color: var(--accent-amber);
+}
+
+.toss-option.selected.bowl {
+  border-color: var(--accent-blue);
+  background: rgba(66, 165, 245, 0.06);
+  color: var(--accent-blue);
+}
+
+.option-icon {
+  font-size: 2rem;
+}
+
+.option-label {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Summary */
+.toss-summary {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.summary-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+}
+
+.summary-text strong {
+  color: var(--primary);
+}
+
+.proceed-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+}

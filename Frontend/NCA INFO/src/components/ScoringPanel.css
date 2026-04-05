@@ -1,0 +1,274 @@
+/* ===== SCORING PANEL ===== */
+.scoring-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-default);
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.scoring-section {
+  margin-bottom: var(--space-sm);
+}
+
+.scoring-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Score buttons */
+.score-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 12px 8px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  min-height: 56px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.score-btn:active:not(:disabled) {
+  transform: scale(0.93);
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Wicket Modal */
+.wicket-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-md);
+}
+
+.wicket-modal {
+  width: 100%;
+  max-width: 320px;
+  background: rgba(20, 20, 30, 0.95);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.wicket-modal h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--danger);
+  font-size: 1.5rem;
+}
+
+.wicket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.wicket-type-btn {
+  background: rgba(255, 60, 60, 0.1);
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  color: var(--text-primary);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wicket-type-btn:active {
+  transform: scale(0.95);
+  background: var(--danger);
+}
+
+.cancel-wicket-btn {
+  width: 100%;
+}
+
+.btn-value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.btn-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Dot ball */
+.dot-btn {
+  border-color: var(--dot-color);
+}
+
+.dot-btn:active:not(:disabled) {
+  background: var(--dot-color);
+  color: white;
+}
+
+/* Run buttons */
+.run-btn:active:not(:disabled) {
+  background: var(--primary);
+  color: var(--text-inverse);
+  border-color: var(--primary);
+}
+
+/* Four */
+.four-btn {
+  border-color: rgba(66, 165, 245, 0.3);
+  background: rgba(66, 165, 245, 0.06);
+}
+
+.four-btn .btn-value {
+  color: var(--four-color);
+}
+
+.four-btn:active:not(:disabled) {
+  background: var(--four-color);
+  color: var(--text-inverse);
+}
+
+.four-btn:active:not(:disabled) .btn-value {
+  color: var(--text-inverse);
+}
+
+/* Six */
+.six-btn {
+  border-color: rgba(255, 215, 64, 0.3);
+  background: rgba(255, 215, 64, 0.06);
+}
+
+.six-btn .btn-value {
+  color: var(--six-color);
+}
+
+.six-btn:active:not(:disabled) {
+  background: var(--six-color);
+  color: var(--text-inverse);
+}
+
+.six-btn:active:not(:disabled) .btn-value {
+  color: var(--text-inverse);
+}
+
+/* Boundary row */
+.boundary-row {
+  margin-top: var(--space-sm);
+}
+
+/* Extras row */
+.extras-row {
+  margin-top: var(--space-sm);
+}
+
+/* Wide */
+.wide-btn {
+  border-color: rgba(255, 167, 38, 0.3);
+}
+
+.wide-btn .btn-value {
+  color: var(--wide-color);
+  font-size: 1rem;
+}
+
+.wide-btn:active:not(:disabled) {
+  background: var(--wide-color);
+  color: var(--text-inverse);
+}
+
+/* No Ball */
+.nb-btn {
+  border-color: rgba(239, 83, 80, 0.3);
+}
+
+.nb-btn .btn-value {
+  color: var(--noball-color);
+  font-size: 1rem;
+}
+
+.nb-btn:active:not(:disabled) {
+  background: var(--noball-color);
+  color: var(--text-inverse);
+}
+
+/* Wicket */
+.wicket-btn {
+  border-color: rgba(255, 23, 68, 0.3);
+  background: rgba(255, 23, 68, 0.06);
+}
+
+.wicket-btn .btn-value {
+  color: var(--wicket-color);
+  font-size: 1.5rem;
+}
+
+.wicket-btn:active:not(:disabled) {
+  background: var(--wicket-color);
+  color: white;
+  animation: shake 0.3s ease;
+}
+
+/* Action buttons */
+.scoring-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.undo-btn {
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+}
+
+.undo-btn:hover {
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+.end-innings-btn {
+  background: rgba(255, 82, 82, 0.08);
+  color: var(--accent-red);
+  border: 1px solid rgba(255, 82, 82, 0.2);
+}
+
+.end-innings-btn:hover {
+  background: rgba(255, 82, 82, 0.15);
+}

@@ -1,0 +1,278 @@
+/* ===== TEAM CREATION PAGE ===== */
+.team-page {
+  min-height: 100vh;
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.team-header {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.match-code-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(0, 200, 83, 0.1);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 200, 83, 0.2);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-md);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: var(--space-xs);
+}
+
+/* Team Tabs */
+.team-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.team-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 12px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.team-tab.active {
+  border-color: var(--primary);
+  background: rgba(0, 200, 83, 0.06);
+  color: var(--text-primary);
+}
+
+.tab-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.tab-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.tab-check {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Team Form */
+.team-form {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.team-name-input {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.add-player-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.player-input {
+  flex: 1;
+}
+
+.btn-add {
+  width: 52px;
+  height: 52px;
+  background: var(--primary);
+  color: var(--text-inverse);
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-add:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-add:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Player List */
+.player-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-height: 80px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl) 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.empty-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  transition: background var(--transition-fast);
+}
+
+.player-item:hover {
+  background: var(--bg-elevated);
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.player-number {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.player-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.captain-badge, .vc-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.captain-badge {
+  background: rgba(255, 215, 64, 0.15);
+  color: var(--accent-amber);
+  border: 1px solid rgba(255, 215, 64, 0.3);
+}
+
+.vc-badge {
+  background: rgba(179, 136, 255, 0.15);
+  color: var(--accent-purple);
+  border: 1px solid rgba(179, 136, 255, 0.3);
+}
+
+/* Player action buttons */
+.player-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.role-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.role-btn:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.role-btn.active-c {
+  background: rgba(255, 215, 64, 0.15);
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+.role-btn.active-vc {
+  background: rgba(179, 136, 255, 0.15);
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+}
+
+.remove-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.remove-btn:hover {
+  color: var(--accent-red);
+  background: rgba(255, 82, 82, 0.1);
+}
+
+/* Save button */
+.save-teams-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: 16px;
+  font-size: 1.05rem;
+}

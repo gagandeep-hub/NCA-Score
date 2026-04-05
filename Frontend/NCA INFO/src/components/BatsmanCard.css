@@ -1,0 +1,87 @@
+/* ===== BATSMAN CARD ===== */
+.batsman-card {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.card-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.batsman-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+}
+
+.batsman-row.striker .batsman-info {
+  color: var(--text-primary);
+}
+
+.batsman-info {
+  color: var(--text-secondary);
+}
+
+.batsman-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.striker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+  flex-shrink: 0;
+}
+
+.cap-tag {
+  font-size: 0.6rem;
+  color: var(--accent-amber);
+  font-weight: 700;
+}
+
+.batsman-stats {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.stat-runs {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.stat-balls {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.stat-detail {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.stat-sr {
+  color: var(--accent-cyan);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.batsman-divider {
+  height: 1px;
+  background: var(--border-default);
+}

@@ -1,0 +1,294 @@
+/* ===== HOME PAGE ===== */
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 16px 140px 16px; /* Heavy padding to prevent any overlap */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background orbs */
+.home-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.home-bg-orb-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary);
+  top: -80px;
+  right: -80px;
+  opacity: 0.08;
+}
+
+.home-bg-orb-2 {
+  width: 250px;
+  height: 250px;
+  background: var(--accent-blue);
+  bottom: -60px;
+  left: -60px;
+  opacity: 0.06;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Header */
+.home-header {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.home-logo {
+  margin-bottom: var(--space-md);
+}
+
+.logo-icon {
+  font-size: 3.5rem;
+  display: inline-block;
+  animation: bounceIn 0.6s ease;
+}
+
+.home-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: var(--space-xs);
+}
+
+/* Cards */
+.home-card {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.create-icon {
+  background: rgba(0, 200, 83, 0.12);
+}
+
+.join-icon {
+  background: rgba(66, 165, 245, 0.12);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Buttons */
+.home-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Create options */
+.create-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.overs-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.overs-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.overs-input-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.overs-input {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.overs-suffix {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Join form */
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.match-code-input {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* Navbar (Top Center Focus) */
+.home-navbar {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center small */
+  z-index: 100;
+}
+
+.nav-dev-branding {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(12, 14, 16, 0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-dev-branding .dev-photo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+}
+
+.nav-dev-text {
+  display: flex;
+  align-items: center;
+}
+
+.nav-dev-text h4 {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+  margin-bottom: 0;
+}
+
+.dev-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dim));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* General Developer Banner Styles */
+.dev-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: rgba(12, 14, 16, 0.85);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(0,229,255,0.1);
+  width: 90%;
+  max-width: 380px;
+  z-index: 50;
+  text-align: left;
+}
+
+.dev-banner .dev-photo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.dev-banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-banner-text h4 {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.bottom-banner {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}

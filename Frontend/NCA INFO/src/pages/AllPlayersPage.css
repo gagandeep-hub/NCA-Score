@@ -1,0 +1,109 @@
+/* ===== ALL PLAYERS PAGE ===== */
+.players-page {
+  min-height: 100vh;
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.players-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.players-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+  filter: drop-shadow(0 0 10px var(--primary-glow));
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  margin-bottom: var(--space-xl);
+}
+
+.players-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-body);
+}
+
+.players-table th, 
+.players-table td {
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.players-table th {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+.players-table tr:last-child td {
+  border-bottom: none;
+}
+
+.players-table tr {
+  transition: background 0.2s ease;
+}
+
+.players-table tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Sticky Column for Player Names */
+.sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #111827; /* Near black to match stitch bg */
+  border-right: 1px solid var(--border-light);
+}
+
+.player-name-cell {
+  color: var(--primary);
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-align: left !important;
+}
+
+.highlight-stat {
+  color: var(--primary);
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.highlight-stat-alt {
+  color: #ff9800; /* Warm orange to contrast cyan */
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.players-table td {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.back-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .players-table th, 
+  .players-table td {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.8rem;
+  }
+}
