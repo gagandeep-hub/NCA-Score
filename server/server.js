@@ -16,14 +16,14 @@ const server = http.createServer(app);
 // ===== INIT SOCKET.IO =====
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: [process.env.CLIENT_URL, 'http://localhost:5173', 'https://nca-score-nhzm.vercel.app'],
     methods: ['GET', 'POST', 'PUT']
   }
 });
 
 // ===== MIDDLEWARE =====
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173'
+  origin: [process.env.CLIENT_URL, 'http://localhost:5173', 'https://nca-score-nhzm.vercel.app']
 }));
 app.use(express.json());
 
